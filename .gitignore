@@ -1,0 +1,33 @@
+# ---- environments / caches ----
+.venv/
+.env
+__pycache__/
+*.py[cod]
+*.so
+*.egg-info/
+.ipynb_checkpoints/
+
+# ---- data (large; not redistributable; symlinks may leak local paths) ----
+datasets/*
+!datasets/README.md
+*.npy
+*.npz
+
+# ---- third-party baselines cloned locally (e.g. PIDForest) ----
+third_party/
+
+# ---- generated figures/tables (regenerate via tools/ + experiments;
+#      the curated logo + AnoCUB showcase PNGs under figures/ are kept) ----
+figures/*.pdf
+tables/*.tex
+
+# ---- paper sources and slides are NOT part of the code release ----
+# (only supplementary.pdf is shipped, at the repo root)
+paper/
+presentations/
+
+# ---- editor / OS ----
+.idea/
+.vscode/
+.DS_Store
+texput.log

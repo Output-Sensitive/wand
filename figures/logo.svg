@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 130" width="540" height="130">
+  <!-- WAND logo: minimalist geometric.
+       A unit-sphere boundary (inlier mass) with three radial probe
+       directions piercing it to hit outlier points beyond. The
+       wordmark sits to the right of the mark. -->
+
+  <defs>
+    <!-- arrowhead -->
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5"
+            markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#1f4e79"/>
+    </marker>
+  </defs>
+
+  <!-- ===== icon ===== -->
+  <g transform="translate(65,65)">
+    <!-- unit-sphere boundary -->
+    <circle r="34" fill="#e8eef7" stroke="#1f4e79" stroke-width="1.4"/>
+
+    <!-- inlier cloud (small dots inside the disc) -->
+    <g fill="#1f4e79" opacity="0.7">
+      <circle cx="-12" cy="-6"  r="2"/>
+      <circle cx="-4"  cy="8"   r="2"/>
+      <circle cx="6"   cy="-9"  r="2"/>
+      <circle cx="10"  cy="6"   r="2"/>
+      <circle cx="-2"  cy="-2"  r="2"/>
+      <circle cx="14"  cy="-2"  r="2"/>
+      <circle cx="-14" cy="6"   r="2"/>
+      <circle cx="0"   cy="14"  r="2"/>
+      <circle cx="6"   cy="-16" r="2"/>
+    </g>
+
+    <!-- radial probes -->
+    <line x1="0" y1="0" x2="46"  y2="-26"
+          stroke="#1f4e79" stroke-width="1.4"
+          stroke-dasharray="3 3" marker-end="url(#arrow)"/>
+    <line x1="0" y1="0" x2="-44" y2="20"
+          stroke="#1f4e79" stroke-width="1.4"
+          stroke-dasharray="3 3" marker-end="url(#arrow)"/>
+    <line x1="0" y1="0" x2="14"  y2="48"
+          stroke="#1f4e79" stroke-width="1.4"
+          stroke-dasharray="3 3" marker-end="url(#arrow)"/>
+
+    <!-- outlier dots (where the probes land) -->
+    <g fill="#c0392b" stroke="#7c1f17" stroke-width="0.8">
+      <circle cx="52"  cy="-30" r="3.4"/>
+      <circle cx="-50" cy="22"  r="3.4"/>
+      <circle cx="16"  cy="55"  r="3.4"/>
+    </g>
+  </g>
+
+  <!-- ===== wordmark ===== -->
+  <g transform="translate(195,75)" font-family="Helvetica, Arial, sans-serif"
+     fill="#1f4e79">
+    <text x="0" y="0" font-size="40" font-weight="700">WAND</text>
+    <text x="3" y="22" font-size="11" font-weight="500" letter-spacing="0.5"
+          fill="#5a738f">
+      Probe-Efficient, Explainable Anomaly Detection
+    </text>
+  </g>
+</svg>
